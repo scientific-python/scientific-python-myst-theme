@@ -1,28 +1,15 @@
 version: 1
+extends: config/scientific-python.yml
 project:
   title: {{project_url}}
-  toc:
-    - file: _index.md
-    - title: About
-      children:
-        - file: about/_index.md
-    - title: News
-      children:
-        - file: news.md
+
 site:
-  template: book-theme
   nav:
     - title: About
       url: /about
     - title: News
       url: /news
   options:
-    hide_toc: true
-    hide_footer_links: true
-    folders: true
-    favicon: {{favicon}}
-    logo: static/images/dancing-logo-berkeley.svg
+    favicon: assets/images/favicon.ico
+    logo: assets/images/logo.svg
     logo_text: {{project_name}}
-    style: assets/css/site.css
-  parts:
-    footer: footer.md
