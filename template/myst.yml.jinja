@@ -1,0 +1,28 @@
+version: 1
+project:
+  title: {{project_url}}
+  toc:
+    - file: _index.md
+    - title: About
+      children:
+        - file: about/_index.md
+    - title: News
+      children:
+        - file: news.md
+site:
+  template: book-theme
+  nav:
+    - title: About
+      url: /about
+    - title: News
+      url: /news
+  options:
+    hide_toc: true
+    hide_footer_links: true
+    folders: true
+    favicon: static/images/favicon.ico
+    logo: static/images/dancing-logo-berkeley.svg
+    logo_text: "Berkeley OSPO"
+    style: assets/css/site.css
+  parts:
+    footer: footer.md
