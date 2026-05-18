@@ -1,0 +1,9 @@
+_subdirectory: template
+
+project_name:
+    type: str
+    help: what is your project name?
+
+project_url:
+    type: str
+    help: what is your project url?
