@@ -9,7 +9,7 @@ theme.
 
 Install copier:
 
-`pipx install copier` or `uv tool install copier`
+`pip install copier` or `uv tool install copier`
 
 ## Generating your site
 
