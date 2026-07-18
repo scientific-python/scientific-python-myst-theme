@@ -7,8 +7,10 @@ site:
   nav:
     - title: About
       url: /about
+{% if include_news %}
     - title: News
       url: /news
+{% endif %}
   options:
     favicon: assets/images/favicon.ico
     logo: assets/images/logo.svg

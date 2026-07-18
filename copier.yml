@@ -1,5 +1,24 @@
 _subdirectory: template
 
+# Scaffold files rendered on the first `copier copy`, but never overwritten on
+# `copier update`: consumers customise these and own them thereafter. If a file
+# already exists on first copy, copier keeps the existing file.
+_skip_if_exists:
+    - Makefile
+    - myst.yml
+    - index.md
+    - about.md
+    - news.md
+
+# Optional scaffold, decided on the first `copier copy`. When include_news is
+# false, the pattern renders to "news.md" and copier excludes the file; when
+# true, it renders empty and matches nothing. Do not flip the answer on
+# `copier update`: a flip to false deletes news.md, and myst.yml keeps its
+# News nav entry because myst.yml is in `_skip_if_exists`. To remove news
+# from an existing site, delete news.md and its nav entry by hand.
+_exclude:
+    - "{% if not include_news %}news.md{% endif %}"
+
 project_name:
     type: str
     help: what is your project name?
@@ -17,3 +36,8 @@ favicon:
     type: str
     help: what is your project favicon?
     default: "https://raw.githubusercontent.com/scientific-python/scientific-python.org/main/static/favicon.ico"
+
+include_news:
+    type: bool
+    help: Include a news.md page? (affects the initial scaffold only)
+    default: true
