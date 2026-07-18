@@ -64,31 +64,3 @@ const plugin = {
 };
 
 export default plugin;
-
-/*
-- type: mystDirective
-    name: grid
-    args: 1 1 3 3
-    value: |-
-      :::{grid-item}
-      foo
-      :::
-
-      :::{grid-item}
-      bar
-      :::
-    children:
-      - type: grid
-        columns:
-          - 1
-          - 1
-          - 3
-          - 3
-        children:
-          - type: mystDirective
-            name: grid-item
-            value: foo
-          - type: mystDirective
-            name: grid-item
-            value: bar
-*/
