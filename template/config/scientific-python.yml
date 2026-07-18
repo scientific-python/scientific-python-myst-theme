@@ -2,6 +2,7 @@ version: 1
 project:
   plugins:
     - team-grid.mjs
+    - footer-links.mjs
 
 site:
   template: book-theme

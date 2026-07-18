@@ -8,6 +8,11 @@ project_url:
     type: str
     help: what is your project url?
 
+footer_links:
+    type: str
+    help: path to JSON file defining links in the footer as a text-to-url mapping.
+    default: assets/json/footer_links.json
+
 favicon:
     type: str
     help: what is your project favicon?
