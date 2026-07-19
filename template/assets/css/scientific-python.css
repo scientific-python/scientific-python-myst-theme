@@ -46,6 +46,11 @@ main {
     }
   }
 
+.footer-links > a {
+    color: white;
+    text-decoration-color: white;
+}
+
   @media (max-width: 640px) {
     & .outer-grid {
       grid-template-columns: 1fr;
