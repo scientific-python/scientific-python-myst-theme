@@ -31,27 +31,6 @@ const footerLinksDirective = {
           ]
         }
     ));
-    const links = footerArray.map(([text, url]) => ({
-      type: 'listItem',
-      spread: true,
-      children: [
-        {
-          type: 'paragraph',
-          children: [
-            {
-              type: 'link',
-              url: url,
-              children: [
-                 {
-                   type: 'text',
-                   value: text
-                 }
-              ]
-            }
-          ]
-        }
-      ]
-    }));
     return linksGrid;
   },
 };
@@ -59,7 +38,7 @@ const footerLinksDirective = {
 
 /** @type {import('myst-common').MystPlugin} */
 const plugin = {
-    name: 'Footer Links',
+    name: 'Footer Items',
     directives: [footerLinksDirective],
 };
 
