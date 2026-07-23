@@ -3,8 +3,8 @@ project:
   plugins:
     - team-grid.mjs
     - footer-items.mjs
-  static_files:
-    - assets/icons
+  exclude:
+    - assets/icons/README.md
 site:
   template: book-theme
   parts:
