@@ -7,6 +7,7 @@
 % Here we use `grid` to add a basic grid structure to the footer, but we don't use
 % :columns: property of the grid-items to set widths; instead they're defined in
 % asserts/css/scientific-python.css using the `grid-template-columns` property.
+
 ::::::{grid} 1 1 4 4
 :class: outer-grid col-screen
 
@@ -14,6 +15,7 @@
 :::::{grid-item}
 :::{image} assets/images/logo.svg
 :width: 60px
+:class: footer-logo
 :::
 :::::
 
@@ -28,7 +30,7 @@ Community-driven and community-owned initiative dedicated to building a robust, 
 % responsive design experience. This grid will have a single column on narrow screens,
 % and fan out into three columns on wide screens. However, it always remains within
 % its parent grid column.
-::::{grid} 1 1 3 3
+::::{grid} 1 1 2 3
 :class: footer-links
 
 :::{footer-links}
@@ -42,7 +44,7 @@ Community-driven and community-owned initiative dedicated to building a robust, 
 :::::{grid-item}
 :class: socials
 
-::::{grid} 2 3 6 6
+::::{grid} 2 2 3 6
 :class: footer-icons
 
 :::{footer-icons}
@@ -50,7 +52,10 @@ Community-driven and community-owned initiative dedicated to building a robust, 
 :::
 
 ::::
-© 2026 Scientific Python team. All rights reserved.
-:::::
 
+:::{div .copyright}
+© 2026 {{ project_name }} team. All rights reserved.
+:::
+
+:::::
 ::::::

@@ -71,19 +71,6 @@ const footerIconsDirective = {
   },
 };
 
-
-/**
-
-  - type: link
-    url: https://github.com
-    children:
-      - type: image
-        url: https://picsum.photos/id/640/400/200
-        alt: foo
-
-*/
-
-
 /** @type {import('myst-common').MystPlugin} */
 const plugin = {
     name: 'Footer Items',

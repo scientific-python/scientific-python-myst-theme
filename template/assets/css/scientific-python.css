@@ -31,13 +31,10 @@ main {
   padding-left: 2rem;
   padding-right: 2rem;
 
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-
   /* Outer content grid */
   & .outer-grid {
     /* logo, project description, link columns, social icons */
-    grid-template-columns: 1fr 3fr 4fr 3fr;
+    grid-template-columns: 1fr 3fr 3fr 2fr;
     column-gap: 4rem;
     align-items: center;
     margin: 0rem 4rem;
@@ -46,7 +43,6 @@ main {
       list-style: none;
     }
   }
-
 
   @media (max-width: 640px) {
     & .outer-grid {
@@ -89,9 +85,16 @@ main {
 
     & img {
       filter: invert(100%);
-      width: 1.75rem;
+      margin-bottom: 0.1rem;
+      margin-top: 0.1rem;
       min-width: 1.75rem;
+      width: 1.75rem;
     }
+  }
+}
+
+.footer-logo {
+    min-width: 60px;
 }
 
 /* Hide download button */
@@ -125,4 +128,8 @@ h4 {
 /* If the left sidebar feels too dominant, reduce its visual weight */
 .bd-sidebar-primary {
   border-right: 0;
+}
+
+.copyright {
+    font-size: smaller;
 }
