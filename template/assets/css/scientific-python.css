@@ -36,20 +36,17 @@ main {
 
   /* Outer content grid */
   & .outer-grid {
-    /* spacer, project description, spacer, link columns, spacer */
-    grid-template-columns: 3fr 3fr 4fr;
+    /* logo, project description, link columns, social icons */
+    grid-template-columns: 1fr 3fr 4fr 3fr;
+    column-gap: 4rem;
     align-items: center;
-    margin-bottom: 0rem;
+    margin: 0rem 4rem;
 
     & li {
       list-style: none;
     }
   }
 
-.footer-links > a {
-    color: white;
-    text-decoration-color: white;
-}
 
   @media (max-width: 640px) {
     & .outer-grid {
@@ -73,6 +70,28 @@ main {
     font-size: 1.25rem;
     font-weight: bold;
   }
+  & .footer-links {
+    column-gap: 1.5rem !important;
+    line-height: normal !important;
+
+    & a {
+      color: white;
+      text-decoration-color: white;
+      inline-size: min-content;
+      display: inline-block;
+      text-wrap: nowrap;
+    }
+  }
+
+  & .footer-icons {
+    column-gap: 3rem !important;
+    row-gap: 1rem !important;
+
+    & img {
+      filter: invert(100%);
+      width: 1.75rem;
+      min-width: 1.75rem;
+    }
 }
 
 /* Hide download button */

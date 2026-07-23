@@ -2,8 +2,9 @@ version: 1
 project:
   plugins:
     - team-grid.mjs
-    - footer-links.mjs
-
+    - footer-items.mjs
+  static_files:
+    - assets/icons
 site:
   template: book-theme
   parts:
