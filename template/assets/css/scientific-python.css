@@ -67,8 +67,8 @@ main {
     font-weight: bold;
   }
   & .footer-links {
-    column-gap: 1.5rem !important;
-    line-height: normal !important;
+    column-gap: 1.5rem;
+    line-height: normal;
 
     & a {
       color: white;
@@ -80,8 +80,8 @@ main {
   }
 
   & .footer-icons {
-    column-gap: 3rem !important;
-    row-gap: 1rem !important;
+    column-gap: 3rem;
+    row-gap: 1rem;
 
     & img {
       filter: invert(100%);
