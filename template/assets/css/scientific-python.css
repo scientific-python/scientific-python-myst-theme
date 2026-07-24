@@ -34,7 +34,7 @@ main {
   /* Outer content grid */
   & .outer-grid {
     /* logo, project description, link columns, social icons */
-    grid-template-columns: 1fr 3fr 3fr 2fr;
+    grid-template-columns: 2fr 6fr 8fr 3fr;
     column-gap: 4rem;
     align-items: center;
     margin: 0rem 4rem;
