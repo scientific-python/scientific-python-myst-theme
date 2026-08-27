@@ -31,15 +31,13 @@ main {
   padding-left: 2rem;
   padding-right: 2rem;
 
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-
   /* Outer content grid */
   & .outer-grid {
-    /* spacer, project description, spacer, link columns, spacer */
-    grid-template-columns: 3fr 3fr 4fr;
+    /* logo, project description, link columns, social icons */
+    grid-template-columns: 2fr 6fr 8fr 3fr;
+    column-gap: 4rem;
     align-items: center;
-    margin-bottom: 0rem;
+    margin: 0rem 4rem;
 
     & li {
       list-style: none;
@@ -68,6 +66,35 @@ main {
     font-size: 1.25rem;
     font-weight: bold;
   }
+  & .footer-links {
+    column-gap: 1.5rem;
+    line-height: normal;
+
+    & a {
+      color: white;
+      text-decoration-color: white;
+      inline-size: min-content;
+      display: inline-block;
+      text-wrap: nowrap;
+    }
+  }
+
+  & .footer-icons {
+    column-gap: 3rem;
+    row-gap: 1rem;
+
+    & img {
+      filter: invert(100%);
+      margin-bottom: 0.1rem;
+      margin-top: 0.1rem;
+      min-width: 1.75rem;
+      width: 1.75rem;
+    }
+  }
+}
+
+.footer-logo {
+    min-width: 60px;
 }
 
 /* Hide download button */
@@ -101,4 +128,8 @@ h4 {
 /* If the left sidebar feels too dominant, reduce its visual weight */
 .bd-sidebar-primary {
   border-right: 0;
+}
+
+.copyright {
+    font-size: smaller;
 }

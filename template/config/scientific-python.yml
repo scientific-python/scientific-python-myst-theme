@@ -2,7 +2,9 @@ version: 1
 project:
   plugins:
     - team-grid.mjs
-
+    - footer-items.mjs
+  exclude:
+    - assets/icons/README.md
 site:
   template: book-theme
   parts:
