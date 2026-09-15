@@ -94,7 +94,7 @@ main {
 }
 
 .footer-logo {
-    min-width: 60px;
+  min-width: 60px;
 }
 
 /* Hide download button */
@@ -131,5 +131,5 @@ h4 {
 }
 
 .copyright {
-    font-size: smaller;
+  font-size: smaller;
 }
