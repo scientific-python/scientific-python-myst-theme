@@ -1,8 +1,8 @@
 # scientific-python-myst-theme
 
-Scientific Python Myst Theme template. This is a
+Scientific Python MyST Theme template. This is a
 [copier](https://copier.readthedocs.io/en/stable/) template you can
-use to create your own myst website, styled with the Scientific Python
+use to create your own MyST website, styled with the Scientific Python
 theme.
 
 ## Dependencies
