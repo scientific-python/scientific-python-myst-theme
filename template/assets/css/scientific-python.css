@@ -71,8 +71,8 @@ main {
   @media (max-width: 1023px) {
     & .outer-grid {
       grid-template-columns: 1fr;
-      justify-items: center;
-      text-align: center;
+      justify-self: start;
+      text-align: left;
     }
 
     /* One centered, wrapping row of icons instead of a 2-column grid */
