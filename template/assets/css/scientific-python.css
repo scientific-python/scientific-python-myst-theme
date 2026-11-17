@@ -15,17 +15,23 @@ main {
    */
   min-height: 0;
 
-  /* Align main content with the navbar (2rem padding, max 1440px).
-   * text starts under the logo, and the page contents starts near the search box.
-   */
   @media (min-width: 1024px) {
     grid-template-columns:
-      [screen-start] calc(max(2rem, 50% - 720px) + 1.25rem)
+      /* bracketed names are vertical-line landmarks defined by JupyterBook's Myst theme
+         (https://github.com/jupyter-book/myst-theme/blob/main/styles/grid-system.css)
+         which we inherit / extend.
+       */
+      [screen-start]
+      calc(max(2rem, 50% - 720px) + 1.25rem)
+      /* ↑↑↑ left edge: same as right edge; extra 1.25 aligns content w/ navbar logo. */
       [screen-inset-start page-start page-inset-start body-outset-start body-start body-inset-start middle-start gutter-left-start gutter-left-end gutter-right-start]
       1fr
       [gutter-right-end middle-end body-inset-end body-end body-outset-end]
       20.5rem
-      [page-inset-end page-end screen-inset-end] max(2rem, 50% - 720px)
+      /* ↑↑↑ page TOC aligns near the navbar search box's left edge. */
+      [page-inset-end page-end screen-inset-end]
+      max(2rem, 50% - 720px)
+      /* ↑↑↑ right edge: min 2rem padding, limit content to 1440 px */
       [screen-end];
   }
 }
