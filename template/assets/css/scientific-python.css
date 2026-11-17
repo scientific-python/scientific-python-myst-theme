@@ -68,8 +68,8 @@ main {
   /* Tighten spacing on mid-size screens to give the columns more room */
   @media (max-width: 1279px) {
     & .outer-grid {
-      column-gap: 2rem;
-      margin: 0;
+      column-gap: 3rem;
+      margin: 0rem 1rem;
     }
   }
 
@@ -79,6 +79,10 @@ main {
       grid-template-columns: 1fr;
       justify-self: start;
       text-align: left;
+      & .copyright {
+        text-align: center;
+      }
+      margin: 0;
     }
 
     /* One centered, wrapping row of icons instead of a 2-column grid */
@@ -106,12 +110,31 @@ main {
   }
   & .footer-links {
     column-gap: 1.5rem;
+    display: grid;
     line-height: normal;
 
-    /* Two columns that hug the link text, so no dead space sits beside them
-     * (handles case where longest link in one col is much longer than in other col) */
+    /* above 1024px the footer components are no longer stacked, so use 2 cols unless
+     * there are lots of links.
+     * `max-content` hugs the link text, so columns get variable width / no dead space
+     * (handles case where longest link in one col is much longer than in other cols).
+     */
     @media (min-width: 1024px) {
       grid-template-columns: repeat(2, max-content);
+      &:has(> :nth-child(7)) {
+        grid-template-columns: repeat(3, max-content);
+      }
+    }
+    /* Below 1024px footer components are stacked, so use a variable number of cols. */
+    grid-template-columns: repeat(4, max-content);
+    justify-content: center;
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(3, max-content);
+    }
+    @media (max-width: 639px) {
+      grid-template-columns: repeat(2, max-content);
+    }
+    @media (max-width: 479px) {
+      grid-template-columns: none;
     }
 
     & a {
